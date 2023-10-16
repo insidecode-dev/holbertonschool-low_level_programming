@@ -7,12 +7,8 @@
 int main(void)
 {
 int i;
-for (i = 'a'; i < 'z' + 1; i++)
-{
-if (i == 'q' || i == 'e')
-continue;
-putchar(i);
-}
+for (i = 0; i < 10; i++)
+printf("%d", i);
 putchar('\n');
 return (0);
 }
