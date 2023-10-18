@@ -16,12 +16,13 @@ putchar((i % 10) + '0');
 putchar(' ');
 putchar((j / 10) + '0');
 putchar((j % 10) + '0');
-if (i < 98) {
+if (i < 98)
+{
 putchar(',');
 putchar(' ');
 }
 }
 }
 putchar('\n');
-return 0;
+return (0);
 }
