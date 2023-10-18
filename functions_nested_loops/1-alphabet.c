@@ -3,7 +3,6 @@
   * print_alphabet - prints alphabet in lowercase
   * Description: This function prints alphabet in a lowercase
   **/
-void print_alphabet(void);
 void print_alphabet(void)
 {
 char i = 'a';
