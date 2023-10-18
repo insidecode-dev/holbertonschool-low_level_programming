@@ -15,7 +15,7 @@ _putchar(i);
 i++;
 }
 k++;
-i='a';
+i = 'a';
 _putchar('\n');
 }
 }
