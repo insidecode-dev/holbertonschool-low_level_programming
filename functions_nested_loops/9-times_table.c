@@ -18,16 +18,11 @@ _putchar(' ');
 }
 if (product < 10)
 {
-  if(j != 0)
-    _putchar(' ');
+_putchar(' ');
 }
-else
-{
 _putchar((product / 10) + '0');
-}
 _putchar((product % 10) + '0');
 }
-if (i != 9)
 _putchar('\n');
 }
 }
