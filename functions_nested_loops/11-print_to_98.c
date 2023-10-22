@@ -8,45 +8,70 @@ void print_to_98(int n)
 {
 if (n <= 98)
 {
-int i;
-for (i = n; i <= 98; i++)
+for (; n <= 98; n++)
 {
-if (i < 10)
+if (n == 98)
 {
-_putchar(i + '0');
+if (n >= 10)
+{
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
 }
 else
 {
-_putchar(i / 10 + '0');
-_putchar(i % 10 + '0');
-}
-if (i < 98)
-{
-_putchar(',');
-_putchar(' ');
-}
-}
-}
-else
-{
-int j;
-for (j = n; j >= 98; j--)
-{
-if (j < 10)
-{
-_putchar(j + '0');
-}
-else
-{
-_putchar(j / 10 + '0');
-_putchar(j % 10 + '0');
-}
-if (j > 98)
-{
-_putchar(',');
-_putchar(' ');
-}
-}
+_putchar(n + '0');
 }
 _putchar('\n');
+break;
+}
+else
+{
+if (n >= 10)
+{
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
+}
+else
+{
+_putchar(n + '0');
+}
+_putchar(',');
+_putchar(' ');
+}
+}
+}
+else
+{
+for (; n >= 98; n--)
+{
+if (n == 98)
+{
+if (n >= 10)
+{
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
+}
+else
+{
+_putchar(n + '0');
+}
+_putchar('\n');
+break;
+}
+else
+{
+if (n >= 10)
+{
+_putchar(n / 10 + '0');
+_putchar(n % 10 + '0');
+}
+else
+{
+_putchar(n + '0');
+}
+_putchar(',');
+_putchar(' ');
+}
+}
+}
 }
