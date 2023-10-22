@@ -21,6 +21,12 @@ if (main != 0)
 {
 _putchar('0' + main);
 }
+if (j != 9)
+{
+_putchar(',');
+_putchar(' ');
 }
+}
+_putchar('\n');
 }
 }
