@@ -49,6 +49,7 @@ _putchar(i % 10 + '0');
 }
 }
 }
+}
 else
 {
 for (i = n; i >= 98; i--)
