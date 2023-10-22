@@ -12,10 +12,11 @@ for (i = 0; i <= 9; i++)
 for (j = 0; j <= 9; j++)
 {
 main = (i * j) / 10;
-if(((i * j) % 10) == main)
+if (((i * j) % 10) == main)
 {
 _putchar(' ');
 }
+if (j == 0 || i == 0)
 _putchar('0' + main);
 main = (i * j) % 10;
 if (main != ((i * j) / 10))
