@@ -1,0 +1,23 @@
+#include "main.h"
+/**
+ * _isalpha - checks if character is letter
+ * @c: character
+ * Description: This function prints 1 if character is alphabetic, o otherwise
+ * Return: Integer
+ **/
+void jack_bauer(void)
+{
+int hour, minute;
+for (hour = 0; hour < 24; hour++)
+{
+for(minute = 0; minute < 60; minute++)
+{
+_putchar('0' + (hour/10));
+_putchar('0' + (hour%10));
+_putchar(':');
+_putchar('0' + (minute/10));
+_putchar('0' + (minute%10));
+}
+putchar('\n');
+}
+}
