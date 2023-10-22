@@ -17,7 +17,7 @@ if (j > 0)
 _putchar(',');
 _putchar(' ');
 }
-if (product < 10 && j != 9)
+if (product < 10 && j != 0)
 {
 _putchar(' ');
 }
