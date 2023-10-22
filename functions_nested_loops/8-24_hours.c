@@ -16,6 +16,6 @@ _putchar(':');
 _putchar('0' + (minute / 10));
 _putchar('0' + (minute % 10));
 }
-putchar('\n');
+_putchar('\n');
 }
 }
