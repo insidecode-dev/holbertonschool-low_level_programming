@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 /**
  * times_table - prints times table
  * Description: This function prints times table
@@ -17,9 +16,10 @@ if (j > 0)
 _putchar(',');
 _putchar(' ');
 }
-if (product < 10 && j != 0)
+if (product < 10)
 {
-_putchar(' ');
+  if(j != 0)
+    _putchar(' ');
 }
 else
 {
