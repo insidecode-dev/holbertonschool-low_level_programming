@@ -11,9 +11,19 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
+	if (a[i] >= 0)
 		_putchar(a[i]);
+	else
+	{
+		_putchar('-');
+		_putchar(a[i]);
+	}
+
+	if (a[i] != '\0')
+	{
 		_putchar(',');
 		_putchar(' ');
+	}
 	}
 	_putchar('\n');
 }
