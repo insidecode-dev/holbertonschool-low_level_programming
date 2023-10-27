@@ -14,7 +14,7 @@ void rev_string(char *s)
 	{
 		for (; i < (strlen(s) / 2); i++)
 		{
-			s[i] = (s[i] + '0') + (s[(strlen(s) - (i + 1))] + '0'));
+			s[i] = (s[i] + '0') + (s[(strlen(s) - (i + 1))] + '0');
 			s[(strlen(s) - (i + 1))] = s[i] - s[(strlen(s) - (i + 1))];
 			s[i] = s[i] - s[(strlen(s) - (i + 1))];
 		}
@@ -23,7 +23,7 @@ void rev_string(char *s)
 	{
 		for (; i < ((strlen(s) / 2) - 1); i++)
 		{
-			s[i] = (s[i] + '0') + (s[(strlen(s) - (i + 1))] + '0'));
+			s[i] = (s[i] + '0') + (s[(strlen(s) - (i + 1))] + '0');
 			s[(strlen(s) - (i + 1))] = s[i] - s[(strlen(s) - (i + 1))];
 			s[i] = s[i] - s[(strlen(s) - (i + 1))];
 		}
