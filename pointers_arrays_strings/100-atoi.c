@@ -8,9 +8,9 @@
  */
 int _atoi(char *s)
 	{
-		int i, m, val;
+		int i, m, val, isMinus;
 
-		m = 0, val = 0;
+		m = 0, val = 0, isMinus = 0;
 		for (i = 0; s[i] != '\0'; i++)
 		{
 			if (isdigit(s[i]))
@@ -18,13 +18,13 @@ int _atoi(char *s)
 				val = val * 10 + (s[i] - 48);
 				m = 1;
 				if (s[i - 1] == '-')
-				val *= (-1);
+				isMinus = 1;
 			}
 			else
 			{
 				if (m == 1)
-				return (val);
+					return (isMinus == 0 ? val : val * (-1));
 			}
 		}
-		return (val);
+		return (isMinus == 0 ? val : val * (-1));
 	}
