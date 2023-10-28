@@ -8,17 +8,17 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char *ptr;
-	size_t i;
-	int sz;
+	char *ptr = dest;
+	while (*dest)
+	dest++;
 
-	i = 0;
-	sz = strlen(dest) + strlen(src) + 1;
-	ptr = (char *) malloc(sz * sizeof(char));
-	for (i = 0; i < strlen(dest); i++)
-	ptr[i] = dest[i];
-	for (i = 0; i < strlen(src); i++)
-	ptr[strlen(dest) + i] = src[i];
-	ptr[sz] = '\0';
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+
+	*dest = '\0';
 	return (ptr);
 }
