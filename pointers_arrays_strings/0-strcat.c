@@ -15,10 +15,10 @@ char *_strcat(char *dest, char *src)
 	i = 0;
 	sz = strlen(dest) + strlen(src) + 1;
 	ptr = (char *) malloc(sz * sizeof(char));
-	for (i = 0; i < strlen(src); i++)
-	ptr[i] = src[i];
 	for (i = 0; i < strlen(dest); i++)
-	ptr[strlen(src) + i] = dest[i];
+	ptr[i] = dest[i];
+	for (i = 0; i < strlen(src); i++)
+	ptr[strlen(dest) + i] = src[i];
 	ptr[sz] = '\0';
 	return (ptr);
 }
