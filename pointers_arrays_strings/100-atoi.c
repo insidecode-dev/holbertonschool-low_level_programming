@@ -14,19 +14,19 @@ int _atoi(char *s)
 		m = 0, val = 0, isMinus = 0;
 		for (i = 0; s[i] != '\0'; i++)
 		{
+			if (s[i - 1] == '-')
+				isMinus = isMinus == 1 ? 0 : 1;
 			if (isdigit(s[i]))
 			{
-			  if (val > (INT_MAX - (s[i] - '0')) / 10)
+				if (val > (INT_MAX - (s[i] - '0')) / 10)
 				{
 					if (isMinus == 0)
-						return INT_MAX;
+						return (INT_MAX);
 					else
-						return INT_MIN;
-			  	}
+						return (INT_MIN);
+				}
 				val = val * 10 + (s[i] - 48);
 				m = 1;
-				if (s[i - 1] == '-')
-				isMinus = 1;
 			}
 			else
 			{
