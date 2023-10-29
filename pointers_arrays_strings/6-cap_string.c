@@ -15,10 +15,7 @@ char *cap_string(char *str)
 		{
 			*str = toupper(*str);
 		}
-		else if (*(str + 1) == '\t')
-		*(str + 1) = ' ';
 		str++;
 	}
-
 	return (ptr);
 }
