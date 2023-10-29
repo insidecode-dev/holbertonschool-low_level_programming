@@ -1,0 +1,12 @@
+#include <ctype.h>
+#include <string.h>
+
+char *leet(char *str)
+{
+  char *ptr = str;
+
+  while(*str)
+	{
+	  if(*str == )
+	}
+}
