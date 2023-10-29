@@ -8,6 +8,7 @@ char *cap_string(char *str)
 {
 	char *ptr = str;
 
+	*str = toupper(*str);
 	while (*str)
 	{
 		if (isalpha(*str) && isalpha(*(str + 1)) &&
