@@ -1,12 +1,12 @@
 #include <ctype.h>
 /**
  * cap_string - capitalizes all words in string
- * @a: pointer to character
+ * @str: pointer to character
  * Return: pointer to character
  */
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
-	char *ptr = a;
+	char *ptr = str;
 
 	while (*str)
 	{
