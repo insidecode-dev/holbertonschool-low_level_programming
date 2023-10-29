@@ -10,7 +10,8 @@ char *cap_string(char *str)
 
 	while (*str)
 	{
-		if (isalpha(*str) && isalpha(*(str + 1)) && !isalpha(*(str - 1)))
+		if (isalpha(*str) && isalpha(*(str + 1)) &&
+			(*(str - 1) == ' ' || *(str - 1) == '\t'))
 		{
 			*str = toupper(*str);
 		}
