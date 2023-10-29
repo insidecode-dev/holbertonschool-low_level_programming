@@ -12,7 +12,8 @@ char *cap_string(char *str)
 	{
 		if (isalpha(*str) && isalpha(*(str + 1)) &&
 			(*(str - 1) == ' ' || *(str - 1) == '\t'
-			 || *(str - 1) == '.'))
+			 || *(str - 1) == '.'
+			 || *(str - 1) == '\n'))
 		{
 			*str = toupper(*str);
 		}
