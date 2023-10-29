@@ -2,26 +2,24 @@
 #include <string.h>
 /**
  * leet - encodes string into 1337
- * @str: pointer to character
+ * @s: pointer to character
  * Return: pointer to character
  */
-char *leet(char *str)
+char *leet(char *s)
 {
-	char *ptr = str;
+	int i, j;
+	char subs[10], str[10];
 
-	while (*str)
+	i = 0;
+	subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
+	str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+
+	while (s[i])
 	{
-	if ((*str == 'a' || *str == 'A'))
-		*str = '4';
-	else if ((*str == 'e' || *str == 'E'))
-		*str = '3';
-	else if ((*str == 'o' || *str == 'O'))
-		*str = '0';
-	else if ((*str == 't' || *str == 'T'))
-		*str = '7';
-	else if ((*str == 'l' || *str == 'L'))
-		*str = '1';
-	str++;
+		for (j = 0; j < 10; j++)
+		if (s[i] == str[j])
+			s[i] = subs[j];
+	  i++;
 	}
-	return (ptr);
+	return (s);
 }
