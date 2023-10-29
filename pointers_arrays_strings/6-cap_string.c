@@ -11,7 +11,8 @@ char *cap_string(char *str)
 	while (*str)
 	{
 		if (isalpha(*str) && isalpha(*(str + 1)) &&
-			(*(str - 1) == ' ' || *(str - 1) == '\t'))
+			(*(str - 1) == ' ' || *(str - 1) == '\t'
+			 || *(str - 1) == '.'))
 		{
 			*str = toupper(*str);
 		}
