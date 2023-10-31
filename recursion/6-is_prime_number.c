@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * is_prime_number - returns 1 if number is prime
  * @n: integer
@@ -8,7 +7,7 @@
 int is_prime_number(int n)
 {
 	if (n < 0)
-		n = abs(n);
+		return (0);
 	return (_func(n, n / 2));
 }
 /**
