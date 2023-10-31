@@ -1,0 +1,34 @@
+#include "main.h"
+#include <stdlib.h>
+/**
+ * is_prime_number - returns 1 if number is prime
+ * @n: integer
+ * Return: On success 1.
+ */
+int is_prime_number(int n)
+{
+	if (n < 0)
+		n = abs(n);
+	return (_func(n, n / 2));
+}
+/**
+ * _func - returns 1 if number is prime
+ * @num: integer
+ * @i: integer
+ * Return: On success 1.
+ */
+int _func(int num, int i)
+{
+	if (i == 1)
+	{
+		return (1);
+	}
+	else if (num == 1 || num % i == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (_func(num, i - 1));
+	}
+}
