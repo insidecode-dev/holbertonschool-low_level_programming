@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 /**
  * is_palindrome - character to pinter
  * @c: character to pointer *
