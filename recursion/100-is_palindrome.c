@@ -8,15 +8,13 @@
 int is_palindrome(char *c)
 {
 	size_t i;
+	char *temp;
 
 	i = strlen(c);
 	if (i == 1 || i == 0)
 		return (1);
 	if (c[0] != c[i - 1])
 		return (0);
-
-	char *temp;
-
 	temp = (char *)malloc(i - 1);
 	strncpy(temp, c + 1, i - 2);
 	temp[i - 2] = '\0';
