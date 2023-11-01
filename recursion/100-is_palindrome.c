@@ -13,7 +13,9 @@ int is_palindrome(char *c)
 		return (1);
 	if (c[0] != c[i - 1])
 		return (0);
-	c[i - 1] = '\0';
-	c++;
-	return (is_palindrome(c));
+	char temp[i];
+
+	strncpy(temp, c + 1, i - 2);
+	temp[i - 2] = '\0';
+	return (is_palindrome(temp));
 }

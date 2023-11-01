@@ -4,4 +4,5 @@ int _putchar(char c);
 void _puts_recursion(char *s);
 int _func(int num, int i);
 int is_prime_number(int n);
+int is_palindrome(char *s);
 #endif
