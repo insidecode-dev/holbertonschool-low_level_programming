@@ -13,7 +13,8 @@ int is_palindrome(char *c)
 		return (1);
 	if (c[0] != c[i - 1])
 		return (0);
-	char temp[i];
+
+	char *temp = malloc(i - 1);
 
 	strncpy(temp, c + 1, i - 2);
 	temp[i - 2] = '\0';
