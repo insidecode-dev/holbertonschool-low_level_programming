@@ -14,10 +14,10 @@ int main(int argc, char *argv[])
 	if (argc == 3)
 	{
 		result = atoi(argv[1]) * atoi(argv[2]);
-		while (sum)
+		while (result)
 		{
-			_putchar(sum % 10 + '0');
-			sum /= 10;
+			_putchar(result % 10 + '0');
+			result /= 10;
 		}
 		_putchar('\n');
 		return (0);
