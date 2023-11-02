@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int sum;
-	char word[] = "Exit";
+	char *word = "Exit";
 
 	if (argc == 3)
 	{
