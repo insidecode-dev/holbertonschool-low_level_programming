@@ -2,13 +2,12 @@
 #include <string.h>
 /**
  * main - Entry point
- * @argc: count of input argumets
  * @argv: pointer to character
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(char *argv[])
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (i < strlen(argv[0]))
