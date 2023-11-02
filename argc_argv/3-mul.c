@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc == 3)
 	{
 		result = abs(atoi(argv[1]) * atoi(argv[2]));
-		if (argv[1] < 0 || argv[2] < 0)
+		if (atoi(argv[1]) < 0 || atoi(argv[2]) < 0)
 			_putchar('-');
 		while (result)
 		{
