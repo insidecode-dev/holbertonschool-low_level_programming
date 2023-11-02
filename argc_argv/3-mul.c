@@ -8,12 +8,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum;
+	int result;
 	char *word = "Exit";
 
 	if (argc == 3)
 	{
-		sum = atoi(argv[1]) + atoi(argv[2]);
+		result = atoi(argv[1]) * atoi(argv[2]);
 		while (sum)
 		{
 			_putchar(sum % 10 + '0');
