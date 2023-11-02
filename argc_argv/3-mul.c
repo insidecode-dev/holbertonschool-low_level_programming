@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int sum;
-	int remainder;
+	char word[] = "Exit";
 
 	if (argc == 3)
 	{
@@ -22,8 +22,6 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		return (0);
 	}
-
-	char word[] = "Exit";
 
 	while (*word)
 	{
