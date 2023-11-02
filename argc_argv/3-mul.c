@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	int result;
 	int result2;
-	char *word = "Exit";
+	char *word = "Error";
 
 	result2 = 0;
 	if (argc == 3)
