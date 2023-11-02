@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		}
 		while (result2)
 		{
-			_putchar(result2 % 10);
+			_putchar(result2 % 10 + '0');
 			result2 /= 10;
 		}
 		_putchar('\n');
