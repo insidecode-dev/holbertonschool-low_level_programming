@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
 	result2 = 0;
 	if (argc == 3)
 	{
-		result = atoi(argv[1]) * atoi(argv[2]);
+		result = abs(atoi(argv[1]) * atoi(argv[2]));
+		if (argv[1] < 0 || argv[2] < 0)
+			_putchar('-');
 		while (result)
 		{
 			result2 = result2 * 10 + result % 10;
