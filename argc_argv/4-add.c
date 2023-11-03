@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Entry point
  * @argc: count of arguments
@@ -12,22 +13,29 @@ int main(int argc, char *argv[])
 	int sum;
 	char *word = "Error";
 	int result;
+    char *ptr[100];
 
 	i = 1;
 	sum = 0;
+	result = 0;	
 	while (i < argc)
 	{
-			if (atoi(argv[i]) != 0)
-			sum += atoi(argv[i]);
-			else
+    	ptr[i] = argv[i];
+		while (*argv[i])
+		{
+			if (*argv[i] < '0' || *argv[i] > '9')
 			{
 				while (*word)
 				{
 					_putchar(*word);
 					word++;
 				}
+				printf("\n");
 				return (1);
 			}
+			argv[i]++;
+		}
+		sum += atoi(ptr[i]);
 		i++;
 	}
 
@@ -42,5 +50,7 @@ int main(int argc, char *argv[])
 		_putchar(result % 10 + '0');
 		result /= 10;
 	}
+
+	printf("\n");
 	return (0);
 }
