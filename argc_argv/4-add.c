@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int sum;
 	char *word = "Error";
 	int result;
-	char *ptr[1000000000];
+	char *ptr[argc];
 
 	i = 1;
 	sum = 0;
