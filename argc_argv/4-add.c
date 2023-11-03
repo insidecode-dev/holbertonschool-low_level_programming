@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 	char *word = "Error";
 	int result;
 
-	i = 0;
+	i = 1;
 	sum = 0;
 	while (i < argc)
 	{
-		while (*argv[i])
+		while (argv[i])
 		{
-			if (atoi(*argv[i]) != 0)
-			sum += atoi(*argv[i]);
+			if (atoi(argv[i]) != 0)
+			sum += atoi(argv[i]);
 			else
 			{
 				while (*word)
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			argv[i]++;
-			}
+		}
 		i++;
 	}
 
