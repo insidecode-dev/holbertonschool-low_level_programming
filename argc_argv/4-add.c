@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 					_putchar(*word);
 					word++;
 				}
-				printf("\n");
+				_putchar('\n');
 				return (1);
 			}
 			argv[i]++;
@@ -68,14 +68,14 @@ void _print(int sum, int result)
 		sum /= 10;
 	}
 
-	while (result && zero)
+	while (result)
 	{
-		if (result)
-		{
-			_putchar(result % 10 + '0');
-			result /= 10;
-			continue;
-		}
+		putchar(result % 10 + '0');
+		result /= 10;
+	}
+
+	while (zero)
+	{
 		_putchar('0');
 		zero--;
 	}
