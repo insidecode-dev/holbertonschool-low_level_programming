@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int sum;
 	char *word = "Error";
 	int result;
-	char *ptr[argc];
+	char **ptr;
 
 	i = 1;
 	sum = 0;
@@ -24,6 +24,15 @@ int main(int argc, char *argv[])
 		_putchar('0');
 		return (0);
 	}
+
+	ptr = malloc(argc * sizeof(char *));
+	if (ptr == NULL)
+	{
+		_putchar(*word);
+		_putchar('\n');
+		return (1);
+	}
+
 	while (i < argc)
 	{
 		ptr[i] = argv[i];
