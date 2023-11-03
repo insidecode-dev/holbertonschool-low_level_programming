@@ -9,7 +9,6 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int arr_int[100];
 	int sum;
 	char *word = "Error";
 	int result;
