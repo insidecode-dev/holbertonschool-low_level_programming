@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
  * @result: integer
  * Return: Nothing
  */
+void _print(int sum, int result);
 void _print(int sum, int result)
 {
 	int zero;
@@ -78,5 +79,5 @@ void _print(int sum, int result)
 		_putchar('0');
 		zero--;
 	}
-	printf("\n");
+	_putchar('\n');
 }
