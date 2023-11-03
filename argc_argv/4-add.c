@@ -14,12 +14,12 @@ int main(int argc, char *argv[])
 	int sum;
 	char *word = "Error";
 	int result;
-	char *ptr[100];
+	char *ptr[1000000000];
 
 	i = 1;
 	sum = 0;
 	result = 0;
-	if (argc == 0)
+	if (argc == 1)
 	{
 		_putchar('0');
 		return (0);
