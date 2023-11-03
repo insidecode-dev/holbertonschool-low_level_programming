@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		_putchar('0');
+		_putchar('\n');
 		return (0);
 	}
 
@@ -71,7 +72,7 @@ void _print(int sum, int result)
 	zero = 0;
 	while (sum)
 	{
-		if (sum == 0)
+		if (sum % 10 == 0)
 		zero++;
 		result = result * 10 + sum % 10;
 		sum /= 10;
