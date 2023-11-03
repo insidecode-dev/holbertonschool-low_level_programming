@@ -13,14 +13,19 @@ int main(int argc, char *argv[])
 	int sum;
 	char *word = "Error";
 	int result;
-    char *ptr[100];
+	char *ptr[100];
 
 	i = 1;
 	sum = 0;
-	result = 0;	
+	result = 0;
+	if (argc == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
 	while (i < argc)
 	{
-    	ptr[i] = argv[i];
+		ptr[i] = argv[i];
 		while (*argv[i])
 		{
 			if (*argv[i] < '0' || *argv[i] > '9')
@@ -38,19 +43,39 @@ int main(int argc, char *argv[])
 		sum += atoi(ptr[i]);
 		i++;
 	}
+	_print(sum, result, zero);
+	return (0);
+}
 
+/**
+ * _print - Entry point
+ * @sum: integer
+ * @result: integer
+ * Return: Nothing
+ */
+void _print(int sum, int result)
+{
+	int zero;
+
+	zero = 0;
 	while (sum)
 	{
+		if (sum == 0)
+		zero++;
 		result = result * 10 + sum % 10;
 		sum /= 10;
 	}
 
-	while (result)
+	while (result && zero)
 	{
-		_putchar(result % 10 + '0');
-		result /= 10;
+		if (result)
+		{
+			_putchar(result % 10 + '0');
+			result /= 10;
+			continue;
+		}
+		_putchar('0');
+		zero--;
 	}
-
 	printf("\n");
-	return (0);
 }
