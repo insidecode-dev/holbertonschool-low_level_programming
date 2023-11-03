@@ -70,7 +70,7 @@ void _print(int sum, int result)
 
 	while (result)
 	{
-		putchar(result % 10 + '0');
+		_putchar(result % 10 + '0');
 		result /= 10;
 	}
 
