@@ -7,6 +7,7 @@
  * @argv: pointer to character
  * Return: Always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
 	int i;
@@ -43,7 +44,7 @@ int main(int argc, char *argv[])
 		sum += atoi(ptr[i]);
 		i++;
 	}
-	_print(sum, result, zero);
+	_print(sum, result);
 	return (0);
 }
 
