@@ -27,13 +27,6 @@ int main(int argc, char *argv[])
 	}
 
 	ptr = malloc(argc * sizeof(char *));
-	if (ptr == NULL)
-	{
-		_putchar(*word);
-		_putchar('\n');
-		return (1);
-	}
-
 	while (i < argc)
 	{
 		ptr[i] = argv[i];
@@ -41,12 +34,7 @@ int main(int argc, char *argv[])
 		{
 			if (*argv[i] < '0' || *argv[i] > '9')
 			{
-				while (*word)
-				{
-					_putchar(*word);
-					word++;
-				}
-				_putchar('\n');
+				_printWord(word);
 				return (1);
 			}
 			argv[i]++;
@@ -88,6 +76,22 @@ void _print(int sum, int result)
 	{
 		_putchar('0');
 		zero--;
+	}
+	_putchar('\n');
+}
+
+/**
+ * _printWord - Entry point
+ * @word: pointer to string
+ * Return: Nothing
+ */
+void _printWord(char *word);
+void _printWord(char *word)
+{
+	while (*word)
+	{
+		_putchar(*word);
+		word++;
 	}
 	_putchar('\n');
 }
