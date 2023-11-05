@@ -26,12 +26,16 @@ int main(int argc, char *argv[])
 	_putchar('\n');
 	return (1);
 	}
+	if (atoi(argv[1]) == 0)
+	{
+		print_zero();
+		return (1);
+	}
 	cents = atoi(argv[1]);
 	if (cents < 0)
 	{
-	_putchar('0');
-	_putchar('\n');
-	return (0);
+		print_zero();
+		return (1);
 	}
 	numCoins = minCoins(cents);
 	while (numCoins)
@@ -77,4 +81,15 @@ int minCoins(int amount)
 	}
 
 	return (count);
+}
+
+/**
+ * print_zero - Entry point
+ * Return: Nothing
+ */
+void print_zero(void);
+void print_zero(void)
+{
+	_putchar('0');
+	_putchar('\n');
 }
