@@ -9,7 +9,6 @@
  */
 int main(int argc, char *argv[])
 {
-	char *word = "Error";
 	int cents;
 	int numCoins;
 	int result;
