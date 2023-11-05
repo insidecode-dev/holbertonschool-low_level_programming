@@ -102,4 +102,5 @@ void print_word(void)
 	_putchar(*word);
 	word++;
 	}
+	_putchar('\n');
 }
