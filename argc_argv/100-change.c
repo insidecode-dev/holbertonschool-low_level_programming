@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * main - Entry point
  * @argc: count of arguments
@@ -11,8 +12,6 @@ int main(int argc, char *argv[])
 	char *word = "Error";
 	int cents;
 	int numCoins;
-	int coinValues[] = {25, 10, 5, 2, 1};
-	int numCoinValues;
 	int result;
 
 	numCoins = 0;
@@ -59,14 +58,16 @@ int minCoins(int amount)
 {
 	int coins[] = {25, 10, 5, 2, 1};
 	int numCoins = sizeof(coins) / sizeof(coins[0]);
-	int count = 0;
+	int count;
+	int i;
 
+	count = 0;
 	if (amount < 0)
 	{
 		return (0);
 	}
 
-	for (int i = 0; i < numCoins; i++)
+	for (i = 0; i < numCoins; i++)
 	{
 	while (amount >= coins[i])
 	{
