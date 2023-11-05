@@ -18,12 +18,7 @@ int main(int argc, char *argv[])
 	result = 0;
 	if (argc != 2)
 	{
-		while (*word)
-		{
-			_putchar(*word);
-			word++;
-		}
-	_putchar('\n');
+	print_word();
 	return (1);
 	}
 	if (atoi(argv[1]) == 0)
@@ -92,4 +87,20 @@ void print_zero(void)
 {
 	_putchar('0');
 	_putchar('\n');
+}
+
+/**
+ * print_word - Entry point
+ * Return: Nothing
+ */
+void print_word(void);
+void print_word(void)
+{
+	char *word = "Error";
+
+	while (*word)
+	{
+	_putchar(*word);
+	word++;
+	}
 }
