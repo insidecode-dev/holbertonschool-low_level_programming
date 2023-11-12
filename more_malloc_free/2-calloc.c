@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * _calloc - allocate memory using malloc and initialize it to zero
  *@nmemb: number of elements
